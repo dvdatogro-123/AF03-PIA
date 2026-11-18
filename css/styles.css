@@ -365,6 +365,26 @@ textarea.xml-input:focus, .xp-input:focus { outline: 2px solid var(--cyan); bord
 .msg-ok { background: rgba(52, 211, 153, .1); border: 1px solid rgba(52, 211, 153, .45); }
 .msg-err { background: rgba(251, 59, 92, .1); border: 1px solid rgba(251, 59, 92, .5); }
 
+/* ---------- Integrantes ---------- */
+.part-team { border-top: 1px solid var(--line); }
+.team-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.5rem; height: 100%; display: flex; flex-direction: column;
+  transition: transform .2s, border-color .2s;
+}
+.team-card:hover { transform: translateY(-3px); border-color: rgba(220, 255, 148, .5); }
+.team-card .avatar {
+  width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--lime-dim); border: 1px solid rgba(220, 255, 148, .45); color: var(--lime);
+  font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; margin-bottom: 1rem;
+}
+.team-card h3 { font-size: 1.1rem; font-weight: 600; line-height: 1.3; margin: 0 0 .35rem; }
+.team-card .mat { font-family: var(--font-code); font-size: .8rem; color: var(--muted); margin: 0 0 1.25rem; }
+.team-card .mat b { color: var(--text); font-weight: 600; }
+.team-links { display: flex; gap: .5rem; margin-top: auto; }
+.team-links .btn { flex: 1; font-size: .9rem; padding: .5rem .6rem; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .team-card, .team-card:hover { transition: none; transform: none; } }
+
 /* ---------- Footer / utilidades ---------- */
 footer { background: #020306; border-top: 1px solid var(--line); padding: 2.5rem 0; color: var(--muted); font-size: .9rem; }
 #toTop {

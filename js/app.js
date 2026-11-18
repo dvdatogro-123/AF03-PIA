@@ -415,6 +415,24 @@
   validate();
 
   /* =========================================================
+     Integrantes
+     ========================================================= */
+  const initials = (n) => n.split(" ").filter(Boolean).slice(0, 1)
+    .concat(n.split(" ").filter(Boolean).slice(-2, -1)).map((w) => w[0]).join("");
+  $("#teamGrid").innerHTML = TEAM.map((m) => `
+    <div class="col-sm-6 col-lg-4 col-xl-3 reveal">
+      <article class="team-card">
+        <div class="avatar" aria-hidden="true">${esc(initials(m.nombre))}</div>
+        <h3>${esc(m.nombre)}</h3>
+        <p class="mat">Matrícula <b>${esc(m.matricula)}</b></p>
+        <div class="team-links">
+          <a class="btn btn-lime" href="${esc(m.practicas)}" target="_blank" rel="noopener" aria-label="Prácticas profesionales de ${esc(m.nombre)} (abre en otra pestaña)"><i class="bi bi-briefcase"></i> Prácticas</a>
+          <a class="btn btn-ghost" href="${esc(m.becas)}" target="_blank" rel="noopener" aria-label="Becas aplicables de ${esc(m.nombre)} (abre en otra pestaña)"><i class="bi bi-mortarboard"></i> Becas</a>
+        </div>
+      </article>
+    </div>`).join("");
+
+  /* =========================================================
      Términos estáticos, revelado al hacer scroll y botón subir
      ========================================================= */
   initTerms(mainEl);
