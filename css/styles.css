@@ -100,6 +100,47 @@ code, pre, .code { font-family: var(--font-code); }
 .stat b { display: block; font-family: var(--font-head); font-size: 2rem; color: var(--lime); }
 .stat span { color: var(--muted); font-size: .85rem; }
 
+/* ---------- Portada ---------- */
+.portada {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 6.5rem 0 3rem;
+  background:
+    linear-gradient(180deg, rgba(5, 7, 12, .78) 0%, rgba(5, 7, 12, .9) 55%, var(--bg) 100%),
+    url("../img/fime-fachada.jpg") center / cover no-repeat;
+}
+.portada::before { opacity: .25; }
+.portada .container { display: flex; flex-direction: column; gap: 3rem; }
+.portada-inst {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem;
+  padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+.portada-logo {
+  width: 96px; height: 96px; object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, .55));
+}
+.portada-nombres { text-align: center; min-width: 0; }
+.portada-nombres p { margin: 0; }
+.inst-uni { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.1rem, 2.6vw, 1.7rem); color: #fff; letter-spacing: .01em; }
+.inst-fac { color: var(--muted); font-size: clamp(.85rem, 1.8vw, 1.1rem); }
+.portada-centro { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.portada-datos {
+  display: grid; grid-template-columns: repeat(3, auto); gap: 0; margin: 0 0 2rem;
+  background: rgba(21, 26, 36, .78); border: 1px solid var(--line); border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+}
+.portada-datos > div { padding: 1rem 1.75rem; text-align: left; }
+.portada-datos > div + div { border-left: 1px solid var(--line); }
+.portada-datos dt { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--lime); font-weight: 700; }
+.portada-datos dd { margin: .2rem 0 0; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; color: #fff; }
+.portada-stats { display: flex; gap: 3rem; margin-bottom: 2rem; }
+.portada-cta { padding: .7rem 1.6rem; border-radius: 999px; }
+@media (max-width: 767px) {
+  .portada-inst { gap: .75rem; }
+  .portada-logo { width: 56px; height: 56px; }
+  .portada-datos { grid-template-columns: 1fr; width: 100%; }
+  .portada-datos > div + div { border-left: 0; border-top: 1px solid var(--line); }
+}
+
 /* ---------- Secciones ---------- */
 .part { padding: 5rem 0; }
 .part-internet { background: var(--bg); --accent: var(--lime); }
