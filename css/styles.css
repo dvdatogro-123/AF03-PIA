@@ -140,6 +140,11 @@ code, pre, .code { font-family: var(--font-code); }
   font-size: clamp(1.75rem, 4.4vw, 3.25rem); color: var(--lime);
 }
 .portada-lead { color: var(--muted); font-size: 1.125rem; max-width: 34rem; margin-bottom: 2rem; }
+.portada-acciones { display: flex; flex-wrap: wrap; gap: .75rem; }
+.portada-acciones .btn-ghost { border-color: rgba(255, 255, 255, .25); background: rgba(5, 7, 12, .4); }
+.nav-af5 { color: var(--lime) !important; }
+.footer-af5 { color: var(--lime); font-weight: 600; text-decoration: none; }
+.footer-af5:hover { text-decoration: underline; }
 .portada-cta { display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: .75rem 1.6rem; border-radius: 999px; }
 
 /* Ficha de datos */

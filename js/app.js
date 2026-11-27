@@ -1,3 +1,8 @@
+/* =========================================================
+   LINK DE LA EXPOSICIÓN AF5: cambia SOLO esta línea si cambia de dirección.
+   ========================================================= */
+const AF5_URL = "https://dvdatogro-123.github.io/AF5-Exposiciones/";
+
 (function () {
   "use strict";
 
@@ -82,6 +87,14 @@
   document.addEventListener("click", (ev) => {
     const a = ev.target.closest("a.js-salir");
     if (a && !confirm(`Vas a abrir la página de ${a.dataset.tipo} de ${a.dataset.nombre} en otra pestaña.\n\n¿Continuar?`)) ev.preventDefault();
+  });
+
+  // 3) Botones de la exposición AF5: alerta antes de abrirla
+  $$(".js-af5").forEach((a) => {
+    a.href = AF5_URL;
+    a.addEventListener("click", (ev) => {
+      if (!confirm("Vas a abrir nuestra exposición AF5: Historia del Internet y lenguaje XML.\n\n¿Quieres continuar?")) ev.preventDefault();
+    });
   });
 
   /* =========================================================
