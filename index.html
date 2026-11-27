@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Historia del Internet y lenguaje XML</title>
-  <meta name="description" content="Guía interactiva: la historia del Internet de 1969 a 2009 y el lenguaje de marcado XML, con glosario, laboratorio y quiz.">
+  <title>Integrantes · Equipo 1 · Programación Web</title>
+  <meta name="description" content="Integrantes del Equipo 1 de Programación Web (FIME UANL) y sus actividades de prácticas profesionales y becas.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,337 +13,39 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+<body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-site fixed-top" id="mainNav">
+<nav class="navbar navbar-site fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand" href="#inicio"><i class="bi bi-braces"></i> Internet<span>&amp;</span>XML</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto gap-lg-1">
-        <li class="nav-item"><a class="nav-link" href="#internet">Historia del Internet</a></li>
-        <li class="nav-item"><a class="nav-link" href="#xml">Lenguaje XML</a></li>
-        <li class="nav-item"><a class="nav-link" href="#laboratorio">Laboratorio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#integrantes">Integrantes</a></li>
-      </ul>
-    </div>
+    <a class="navbar-brand" href="#inicio"><i class="bi bi-people"></i> Equipo <span>1</span></a>
+    <a class="nav-link" href="#integrantes">Integrantes</a>
   </div>
 </nav>
 
-<main class="rich">
+<main>
 
 <!-- ================= HERO ================= -->
 <header class="hero" id="inicio">
   <div class="container">
-    <span class="eyebrow">Guía interactiva</span>
-    <h1 class="mt-2 mb-3">De la red de <span class="hl-lime">Internet</span><br>al idioma de los <span class="hl-cyan">datos</span></h1>
-    <p class="lead mb-4">Un recorrido por cuatro décadas de historia de Internet (1969–2009) y una explicación completa del lenguaje XML, el formato que permite que sistemas distintos se entiendan entre sí.</p>
-    <p class="hint-bar mb-5"><i class="bi bi-hand-index-thumb"></i> Toca o haz clic en los términos con subrayado punteado, como [[protocolo]], para ver su definición.</p>
-
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a class="hero-card is-lime" href="#internet">
-          <div class="ico"><i class="bi bi-globe2"></i></div>
-          <h3>La Historia del Internet</h3>
-          <p>9 etapas interactivas: de ARPANET y el primer mensaje «LO» hasta Bitcoin y la descentralización.</p>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a class="hero-card is-cyan" href="#xml">
-          <div class="ico"><i class="bi bi-code-slash"></i></div>
-          <h3>El lenguaje de marcado XML</h3>
-          <p>Qué es, de dónde viene, cómo se escribe y por qué sigue vigente. Con validador y consultas XPath en vivo.</p>
-        </a>
-      </div>
-    </div>
+    <span class="eyebrow">AF03 · PIA · Programación Web</span>
+    <h1 class="mt-2 mb-3">Equipo <span class="hl-lime">1</span></h1>
+    <p class="lead mb-4">Ocho estudiantes de la FIME, UANL. Aquí están reunidas las actividades individuales de cada integrante: prácticas profesionales y becas aplicables.</p>
 
     <div class="row g-3 mt-4 pt-3">
-      <div class="col-6 col-md-3 stat"><b>40</b><span>años de historia</span></div>
-      <div class="col-6 col-md-3 stat"><b>9</b><span>etapas de Internet</span></div>
-      <div class="col-6 col-md-3 stat"><b>6</b><span>módulos de XML</span></div>
-      <div class="col-6 col-md-3 stat"><b>70+</b><span>términos explicados</span></div>
+      <div class="col-6 col-md-3 stat"><b id="nTeam">8</b><span>integrantes</span></div>
+      <div class="col-6 col-md-3 stat"><b id="nPages">16</b><span>páginas publicadas</span></div>
     </div>
   </div>
 </header>
 
-<!-- ================= PARTE 1: INTERNET ================= -->
-<section class="part part-internet" id="internet">
-  <div class="container">
-    <div class="reveal">
-      <span class="eyebrow">Parte 1</span>
-      <h2 class="part-title">La Historia del <em>Internet</em></h2>
-      <p class="part-sub">Internet no se inventó de una sola vez: fue creciendo por etapas, y cada una resolvió un problema que abrió la puerta a la siguiente. Selecciona una etapa o avanza con los botones.</p>
-    </div>
-
-    <div class="mt-4 reveal">
-      <div class="stage-nav" id="stageNav" role="tablist" aria-label="Etapas de la historia de Internet"></div>
-      <div class="progress-line" aria-hidden="true"><div id="stageProgress"></div></div>
-      <div id="stagePanel" aria-live="polite"></div>
-      <div class="stage-controls">
-        <button class="btn btn-ghost" id="stagePrev"><i class="bi bi-arrow-left"></i> Anterior</button>
-        <button class="btn btn-lime" id="stageNext">Siguiente <i class="bi bi-arrow-right"></i></button>
-      </div>
-    </div>
-
-    <div class="block reveal">
-      <span class="block-label">Resumen</span>
-      <h3>Las 4 grandes ideas que dejó esta historia</h3>
-      <div class="row g-3">
-        <div class="col-md-6 col-lg-3"><div class="event-card"><h4><i class="bi bi-link-45deg"></i> Estándares abiertos</h4><p>TCP/IP, HTTP y HTML triunfaron porque cualquiera podía usarlos. Un estándar común vale más que un producto aislado.</p></div></div>
-        <div class="col-md-6 col-lg-3"><div class="event-card"><h4><i class="bi bi-people"></i> Del lector al creador</h4><p>Wikipedia, blogs y redes sociales cambiaron el papel del usuario: ahora también produce el contenido.</p></div></div>
-        <div class="col-md-6 col-lg-3"><div class="event-card"><h4><i class="bi bi-cloud-arrow-up"></i> Infraestructura como servicio</h4><p>La nube permitió que cualquier idea llegara al mundo sin comprar servidores propios.</p></div></div>
-        <div class="col-md-6 col-lg-3"><div class="event-card"><h4><i class="bi bi-phone"></i> Siempre conectados</h4><p>Wi-Fi y smartphones llevaron Internet a todas partes y crearon la economía de las aplicaciones.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PARTE 2: XML ================= -->
-<section class="part part-xml" id="xml">
-  <div class="container">
-    <div class="reveal">
-      <span class="eyebrow">Parte 2</span>
-      <h2 class="part-title">El lenguaje de marcado <em>XML</em></h2>
-      <p class="part-sub">Cuando miles de sistemas empezaron a conectarse por Internet apareció una pregunta práctica: ¿cómo comparten datos programas hechos con tecnologías distintas? [[xml|XML]] es una de las respuestas más duraderas.</p>
-    </div>
-
-    <!-- 01 CONTEXTO -->
-    <div class="block reveal">
-      <span class="block-label">01 · Contexto tecnológico</span>
-      <h3>El problema de las islas de información</h3>
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-          <p>Imagina que un hospital guarda a sus pacientes en una [[basedatos|base de datos]] y el laboratorio usa otra, de otro fabricante. Cada una guarda la información en su propio formato cerrado y se comunica mediante una [[api|API]] distinta. Para intercambiar un resultado, alguien tiene que traducirlo a mano. Esas son las <b>islas de información</b>, y lo que falta entre ellas es [[interoperabilidad]].</p>
-          <ul class="list-unstyled mt-3">
-            <li class="rule"><i class="bi bi-x-octagon text-danger"></i><span><b>Formatos incompatibles:</b> bases de datos con estructuras cerradas que otros programas no pueden leer.</span></li>
-            <li class="rule"><i class="bi bi-hourglass-split text-warning"></i><span><b>Fricción operativa:</b> costosas traducciones manuales de archivos entre sistemas.</span></li>
-            <li class="rule"><i class="bi bi-check-circle"></i><span><b>La solución:</b> un formato neutral basado en <b>texto plano</b>, que cualquier sistema pueda leer.</span></li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <div class="panel">
-            <div class="bridge">
-              <div class="node"><i class="bi bi-hdd-rack" style="color:var(--cyan)"></i><b>Servidor Linux</b><br><small>Programa en Java</small></div>
-              <i class="bi bi-lightning-charge-fill arrow"></i>
-              <div class="xml-chip">&lt;XML/&gt;</div>
-              <i class="bi bi-lightning-charge-fill arrow"></i>
-              <div class="node"><i class="bi bi-windows" style="color:var(--indigo)"></i><b>Cliente Windows</b><br><small>Programa en C#</small></div>
-            </div>
-            <p class="text-center mt-3 mb-0" style="color:var(--cyan);font-weight:600">Puente universal libre de licencias y sistemas operativos</p>
-          </div>
-        </div>
-      </div>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">Tres funciones esenciales del lenguaje</h4>
-      <div class="row g-4">
-        <div class="col-md-4"><div class="panel num-card"><span class="num">01</span><h4>Organizar</h4><p>Convierte datos sueltos en <b>árboles lógicos</b>: un dato principal que contiene otros, que a su vez contienen otros. Así un pedido contiene sus productos, y cada producto su precio.</p></div></div>
-        <div class="col-md-4"><div class="panel num-card"><span class="num">02</span><h4>Preservar</h4><p>Guarda la información sin depender de un <b>software [[propietario]]</b>. Un archivo XML guardado hoy se podrá abrir dentro de décadas con un simple editor de texto.</p></div></div>
-        <div class="col-md-4"><div class="panel num-card"><span class="num">03</span><h4>Transmitir</h4><p>Al ser texto plano, viaja por Internet por el mismo canal que las páginas web y normalmente atraviesa los [[firewall|firewalls]] sin ser bloqueado.</p></div></div>
-      </div>
-      <div class="callout mt-4"><b>Dato clave:</b> un archivo XML es <b>[[autodescriptivo]]</b>: incluye tanto el dato como su significado. Por ejemplo, <code>&lt;edad&gt;22&lt;/edad&gt;</code> no solo guarda un 22, también dice que ese 22 es una edad.</div>
-    </div>
-
-    <!-- 02 FUNDAMENTOS -->
-    <div class="block reveal">
-      <span class="block-label">02 · Fundamentos</span>
-      <h3>Más que un lenguaje: un meta-lenguaje</h3>
-      <p><b>eXtensible Markup Language</b> es un estándar del [[w3c|W3C]]. «Marcado» significa que el contenido se rodea de etiquetas que lo describen; «extensible» significa que tú puedes crear esas etiquetas.</p>
-      <p class="quote-xml my-4">XML no trae etiquetas prefabricadas; te entrega las reglas gramaticales para que inventes tu propio vocabulario de datos según tu industria.</p>
-      <p>Por eso es «extensible»: se adapta a hospitales (<code>&lt;paciente&gt;</code>), bancos (<code>&lt;cuenta&gt;</code>), aduanas (<code>&lt;pedimento&gt;</code>) o videojuegos (<code>&lt;personaje&gt;</code>). Es un [[metalenguaje|meta-lenguaje]]: un lenguaje para crear lenguajes.</p>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">Diferencia clave: ¿qué es el dato vs. cómo se ve?</h4>
-      <p>Es común confundir XML con [[html|HTML]] porque ambos usan [[etiqueta|etiquetas]]. Pero tienen misiones opuestas: XML se ocupa de la [[semantica|semántica]] (qué significa el dato) y HTML de la [[presentacion|presentación]] (cómo se ve). Elige uno para comparar:</p>
-      <div class="seg mb-3" id="cmpSeg" role="tablist">
-        <button class="active" data-k="xml">&lt;XML&gt; Semántica</button>
-        <button class="alt" data-k="html">&lt;HTML&gt; Presentación</button>
-      </div>
-      <div class="row g-3" id="cmpOut"></div>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">Atributos que hicieron estándar a XML</h4>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-card-text"></i><div><h5>Autodescriptivo</h5><p>Las etiquetas explican el dato que contienen, así que el archivo se entiende sin manual.</p></div></div></div>
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-cpu"></i><div><h5>Agnóstico</h5><p>Es [[agnostico|agnóstico]]: funciona en cualquier hardware, sistema operativo o nube, porque solo es texto.</p></div></div></div>
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-translate"></i><div><h5>Unicode nativo</h5><p>Soporta cualquier idioma o alfabeto gracias a [[unicode|Unicode]] y [[utf8|UTF-8]]: acentos, ñ, chino, árabe…</p></div></div></div>
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-people"></i><div><h5>Lectura dual</h5><p>Fácil de leer para programadores y para algoritmos (un [[parser]] lo procesa sin ambigüedad).</p></div></div></div>
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-diagram-2"></i><div><h5>Modelo en árbol</h5><p>Relaciones padre-hijo sin ambigüedad: todo cuelga de un único [[arbol|árbol]].</p></div></div></div>
-        <div class="col-md-6 col-lg-4"><div class="feat"><i class="bi bi-shield-check"></i><div><h5>Verificable</h5><p>Rechaza datos corruptos automáticamente si no cumplen las reglas o el [[esquema]].</p></div></div></div>
-      </div>
-    </div>
-
-    <!-- 03 EVOLUCIÓN -->
-    <div class="block reveal">
-      <span class="block-label">03 · Origen y evolución histórica</span>
-      <h3>Cronología del estándar</h3>
-      <p>Cómo se simplificó un estándar industrial para impulsar la Web moderna. Toca cada hito para ver el detalle.</p>
-      <div class="xml-line mt-4" id="xmlLine"></div>
-      <div class="panel mt-4" id="xmlLineDetail"></div>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">El ecosistema que potencia a XML</h4>
-      <p>XML no viaja solo: a su alrededor hay un conjunto de tecnologías complementarias. Ningún otro formato de texto cuenta con un conjunto de herramientas tan maduro.</p>
-      <div class="row g-4" id="ecoGrid"></div>
-    </div>
-
-    <!-- 04 PANORAMA -->
-    <div class="block reveal">
-      <span class="block-label">04 · Panorama actual</span>
-      <h3>¿Por qué sigue vigente XML frente a JSON?</h3>
-      <p>[[json|JSON]] domina las [[rest|APIs REST]] modernas, pero XML no desapareció: cada formato destaca en situaciones distintas.</p>
-      <div class="table-responsive rounded-4 border" style="border-color:var(--line)!important">
-        <table class="table table-xml align-middle">
-          <thead><tr><th>Criterio técnico</th><th class="x">XML</th><th class="j">JSON</th></tr></thead>
-          <tbody>
-            <tr><td><b>Validación y contratos</b></td><td class="good">Nativa y estricta mediante esquemas [[xsd|XSD]]</td><td class="neutral">Limitada: requiere librerías externas (como JSON Schema)</td></tr>
-            <tr><td><b>Soporte de metadatos</b></td><td class="good">Excelente gracias al uso de [[atributo|atributos]]</td><td class="neutral">No posee atributos ni comentarios</td></tr>
-            <tr><td><b>Peso del archivo</b></td><td class="neutral">Más [[verboso]] por las etiquetas de cierre</td><td class="good">Ligero y rápido para aplicaciones web</td></tr>
-            <tr><td><b>Caso de uso ideal</b></td><td style="color:var(--cyan)">Facturación, banca, salud y documentos</td><td style="color:var(--indigo)">APIs REST y aplicaciones móviles</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="panel mt-4">
-        <h5 class="mb-3" style="font-size:1.05rem">Mismo dato, dos formatos <small class="text-secondary">(el tamaño se calcula en vivo)</small></h5>
-        <div class="row g-3">
-          <div class="col-lg-6"><div class="compare-box"><h5 style="color:var(--cyan)">XML</h5><pre class="code hl" id="sizeXml"></pre></div></div>
-          <div class="col-lg-6"><div class="compare-box"><h5 style="color:var(--indigo)">JSON</h5><pre class="code hl-json" id="sizeJson"></pre></div></div>
-        </div>
-        <div class="row g-3 mt-2 align-items-center">
-          <div class="col-4 col-md-2 small text-secondary">XML <b id="szX"></b> car.</div>
-          <div class="col-8 col-md-10"><div class="size-bar"><div id="barX" style="background:var(--cyan)"></div></div></div>
-          <div class="col-4 col-md-2 small text-secondary">JSON <b id="szJ"></b> car.</div>
-          <div class="col-8 col-md-10"><div class="size-bar"><div id="barJ" style="background:var(--indigo)"></div></div></div>
-        </div>
-        <p class="mt-3 mb-0 small" style="color:#c3cddd">Con pocos datos la diferencia parece pequeña, pero en archivos de millones de registros esas etiquetas de cierre se acumulan. A cambio, XML ofrece validación, atributos y comentarios.</p>
-      </div>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">¿Dónde usamos XML todos los días sin notarlo?</h4>
-      <div class="row g-3">
-        <div class="col-sm-6 col-lg-4"><div class="use-card"><i class="bi bi-receipt" style="color:var(--cyan)"></i><h5>Facturación electrónica (CFDI)</h5><p>El [[sat|SAT]] y los bancos validan cada impuesto vía XML. Cuando descargas tu [[cfdi|factura]], el archivo .xml es el comprobante oficial; el PDF es solo su representación visual.</p></div></div>
-        <div class="col-sm-6 col-lg-4"><div class="use-card"><i class="bi bi-file-earmark-word" style="color:var(--indigo)"></i><h5>Archivos de Office</h5><p>Los .docx y .xlsx son carpetas comprimidas llenas de archivos XML ([[ooxml|Office Open XML]]). Si cambias la extensión a .zip, puedes abrirlos y verlos.</p></div></div>
-        <div class="col-sm-6 col-lg-4"><div class="use-card"><i class="bi bi-android2" style="color:var(--green)"></i><h5>Apps Android y configuración</h5><p>Las pantallas y permisos de Android (AndroidManifest.xml) y la configuración de proyectos [[maven|Maven]] (pom.xml) se escriben en XML.</p></div></div>
-        <div class="col-sm-6 col-lg-6"><div class="use-card"><i class="bi bi-bezier2" style="color:var(--red)"></i><h5>Gráficos vectoriales (SVG)</h5><p>Los iconos escalables de la web, como los de esta página, son código XML puro: el [[svg|SVG]] describe formas con etiquetas como &lt;circle&gt; y &lt;path&gt;.</p></div></div>
-        <div class="col-sm-12 col-lg-6"><div class="use-card"><i class="bi bi-rss" style="color:var(--amber)"></i><h5>Podcasts y sitemaps SEO</h5><p>Los podcasts se distribuyen con un feed [[rss|RSS]] en XML, y Google indexa sitios web leyendo su [[sitemap|sitemap.xml]].</p></div></div>
-      </div>
-    </div>
-
-    <!-- 05 ESTRUCTURA -->
-    <div class="block reveal">
-      <span class="block-label">05 · Estructura</span>
-      <h3>Anatomía y reglas de sintaxis</h3>
-      <p>Cómo construir un árbol jerárquico perfecto, desde el prólogo hasta los nodos hoja. Selecciona una pieza para resaltarla en el código. Cada parte del documento es un [[nodo]]: el [[prologo|prólogo]], el [[raiz|nodo raíz]], los [[elemento|elementos]] hijo, los atributos, el texto y los [[comentario|comentarios]].</p>
-
-      <div class="row g-4">
-        <div class="col-lg-4"><div id="anatChips"></div></div>
-        <div class="col-lg-8">
-<pre class="code dim" id="anatCode"><span data-part="prologo" class="t-pro">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span data-part="comentario" class="t-cmt">&lt;!-- Catálogo revisado en 2026 --&gt;</span>
-<span data-part="raiz" class="t-tag">&lt;biblioteca&gt;</span>
-  <span data-part="hijo" class="t-tag">&lt;libro</span> <span data-part="atributo"><span class="t-attr">id</span>=<span class="t-val">"001"</span> <span class="t-attr">moneda</span>=<span class="t-val">"MXN"</span></span><span class="t-tag">&gt;</span>
-    <span data-part="hijo" class="t-tag">&lt;titulo&gt;</span><span data-part="texto" class="t-txt">Redes</span><span data-part="hijo" class="t-tag">&lt;/titulo&gt;</span>
-    <span data-part="hijo" class="t-tag">&lt;autor&gt;</span><span data-part="texto" class="t-txt">Juan Pérez</span><span data-part="hijo" class="t-tag">&lt;/autor&gt;</span>
-  <span data-part="hijo" class="t-tag">&lt;/libro&gt;</span>
-<span data-part="raiz" class="t-tag">&lt;/biblioteca&gt;</span></pre>
-          <div class="panel anat-explain mt-3" id="anatExplain"></div>
-        </div>
-      </div>
-
-      <div class="callout mt-4"><b>Regla de diseño:</b> usa <b>elementos hijo</b> para los datos principales o estructuras anidadas (<code>&lt;titulo&gt;</code>) y <b>atributos</b> para identificadores y [[metadatos]] cortos (<code>id="001"</code>). Un atributo no puede contener otros elementos ni repetirse en la misma etiqueta.</div>
-
-      <h4 class="mt-5 mb-3" style="font-size:1.25rem">Leyes de sintaxis: ¿bien formado o válido?</h4>
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="panel h-100">
-            <h5 style="color:var(--cyan)">1. Documento «bien formado»</h5>
-            <p class="small text-secondary">Un documento [[bienformado|bien formado]] cumple las reglas básicas de sintaxis. Si falla una, el [[parser]] se detiene y rechaza todo el documento.</p>
-            <div class="rule"><i class="bi bi-check2-circle"></i><span><b>Cierre obligatorio:</b> toda etiqueta abierta debe cerrarse (<code>&lt;a&gt;…&lt;/a&gt;</code>) o ser autocerrada (<code>&lt;a/&gt;</code>).</span></div>
-            <div class="rule"><i class="bi bi-check2-circle"></i><span><b>Sensible a mayúsculas:</b> <code>&lt;Libro&gt;</code> es distinto de <code>&lt;libro&gt;</code>.</span></div>
-            <div class="rule"><i class="bi bi-check2-circle"></i><span><b>Comillas siempre:</b> todo atributo lleva comillas: <code>id="1"</code>.</span></div>
-            <div class="rule"><i class="bi bi-check2-circle"></i><span><b>Orden de anidación:</b> prohibido cruzar etiquetas entre sí. La última que abres es la primera que cierras.</span></div>
-            <div class="rule"><i class="bi bi-check2-circle"></i><span><b>Un solo nodo raíz:</b> todo el documento cuelga de un único elemento.</span></div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="panel h-100" style="border-color:var(--indigo)">
-            <h5 style="color:var(--indigo)">2. Documento «válido»</h5>
-            <p>Un documento [[valido|válido]], además de estar bien formado, cumple con un [[esquema]] externo ([[xsd|XSD]] o [[dtd|DTD]]) que verifica qué elementos existen, en qué orden y de qué <b>tipos de datos</b> son. Por ejemplo: que <code>&lt;edad&gt;</code> sea un número entero.</p>
-            <p class="small text-secondary mb-2">Todo documento válido es bien formado, pero no al revés.</p>
-            <h6 class="mt-3">Escapa símbolos especiales</h6>
-            <p class="small text-secondary">Algunos caracteres son parte de la sintaxis y deben sustituirse por [[entidad|entidades]] cuando forman parte del texto:</p>
-            <table class="table table-sm table-xml mb-0">
-              <thead><tr><th>Escribes</th><th>Representa</th></tr></thead>
-              <tbody>
-                <tr><td><code>&amp;lt;</code></td><td>&lt; (menor que)</td></tr>
-                <tr><td><code>&amp;gt;</code></td><td>&gt; (mayor que)</td></tr>
-                <tr><td><code>&amp;amp;</code></td><td>&amp; (ampersand)</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= LABORATORIO ================= -->
-<section class="part part-xml" id="laboratorio" style="padding-top:0">
-  <div class="container">
-    <div class="block reveal" style="margin-top:0">
-      <span class="block-label" style="color:var(--green)">06 · Laboratorio XML</span>
-      <h3>Casos prácticos en código</h3>
-      <p>Análisis de perfiles personales, catálogos comerciales y registros escolares. Elige un caso, mira cómo el navegador lo convierte en árbol y consúltalo con [[xpath|XPath]].</p>
-
-      <div class="lab-tabs mb-3" id="labTabs"></div>
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <pre class="code" id="labCode"></pre>
-          <div class="mt-3" id="labNotes"></div>
-        </div>
-        <div class="col-lg-6">
-          <div class="panel mb-3">
-            <h5 class="mb-3" style="font-size:1rem"><i class="bi bi-diagram-3" style="color:var(--cyan)"></i> Árbol del documento</h5>
-            <ul class="tree" id="labTree"></ul>
-          </div>
-          <div class="panel">
-            <h5 class="mb-2" style="font-size:1rem"><i class="bi bi-search" style="color:var(--indigo)"></i> Consulta con XPath</h5>
-            <input class="xp-input" id="xpInput" spellcheck="false" aria-label="Expresión XPath" placeholder="Escribe una expresión XPath…">
-            <div class="d-flex flex-wrap gap-2 my-2" id="xpChips"></div>
-            <div class="xp-result" id="xpOut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="block reveal">
-      <span class="block-label" style="color:var(--green)">Herramienta</span>
-      <h3>Validador de sintaxis: ponlo a prueba</h3>
-      <p>Escribe tu propio XML o carga un ejemplo con un error típico y mira cómo reacciona un [[parser]]. (Revisa si el documento está <b>bien formado</b>; la validación contra un XSD requiere un esquema aparte.)</p>
-      <div class="d-flex flex-wrap gap-2 mb-3" id="valSamples"></div>
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <textarea class="xml-input" id="valInput" spellcheck="false" aria-label="Editor de XML"></textarea>
-          <div class="d-flex gap-2 mt-2">
-            <button class="btn btn-info fw-semibold" id="valBtn"><i class="bi bi-patch-check"></i> Validar</button>
-            <button class="btn btn-outline-secondary" id="valClear">Limpiar</button>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div id="valMsg" aria-live="polite"></div>
-          <ul class="tree mt-3" id="valTree"></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= INTEGRANTES ================= -->
-<section class="part part-internet part-team" id="integrantes">
+<section class="part part-internet" id="integrantes">
   <div class="container">
     <div class="reveal">
       <span class="eyebrow">Equipo 1</span>
       <h2 class="part-title">Los <em>integrantes</em></h2>
-      <p class="part-sub">Quiénes hicimos esta guía. Cada integrante tiene publicadas sus actividades individuales: la de prácticas profesionales y la de becas aplicables.</p>
+      <p class="part-sub">Cada integrante tiene publicadas sus actividades individuales: la de prácticas profesionales y la de becas aplicables.</p>
     </div>
     <div class="row g-4 mt-2" id="teamGrid"></div>
   </div>
@@ -352,7 +54,7 @@
 
 <footer>
   <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-    <span><i class="bi bi-braces"></i> Historia del Internet &amp; lenguaje XML · Página informativa interactiva</span>
+    <span><i class="bi bi-people"></i> Equipo 1 · Programación Web · FIME UANL</span>
     <span>HTML · CSS · JavaScript · Bootstrap 5</span>
   </div>
 </footer>
