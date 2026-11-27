@@ -1,27 +1,37 @@
-/* ---------- INTEGRANTES DEL EQUIPO ---------- */
+/* ---------- INTEGRANTES DEL EQUIPO ----------
+   intercambio: link de la AF02 (intercambio FIME en XML).
+   Si está vacío "", la tarjeta muestra "Intercambio pendiente". */
 const TEAM = [
   { nombre: "David Alonso Torres Guerrero", matricula: "2144813",
     practicas: "https://dvdatogro-123.github.io/AF6-PracticasProfesionales/",
-    becas: "https://dvdatogro-123.github.io/AF7_BecasAplicables/" },
+    becas: "https://dvdatogro-123.github.io/AF7_BecasAplicables/",
+    intercambio: "https://dvdatogro-123.github.io/AF02-ORD/" },
   { nombre: "Héctor Alexander Tovar González", matricula: "2144664",
     practicas: "https://alexander-tovar.github.io/fundamentales/practicas/",
-    becas: "https://alexander-tovar.github.io/fundamentales/becas/" },
+    becas: "https://alexander-tovar.github.io/fundamentales/becas/",
+    intercambio: "https://alexander-tovar.github.io/fundamentales/intercambio/" },
   { nombre: "Edgar Leonardo Guzman Ibarra", matricula: "2148230",
     practicas: "https://leoguz12.github.io/PrograWeb-PracticasProfesionales/",
-    becas: "https://leoguz12.github.io/BecasPrograWeb/" },
+    becas: "https://leoguz12.github.io/BecasPrograWeb/",
+    intercambio: "" },
   { nombre: "Ian Karim Ávila González", matricula: "2117490",
     practicas: "https://jhonrick0923.github.io/actividad-fundamental-6/",
-    becas: "https://jhonrick0923.github.io/actividad-fundamental-7/" },
+    becas: "https://jhonrick0923.github.io/actividad-fundamental-7/",
+    intercambio: "https://jhonrick0923.github.io/actividad-fundamental-2/AF2.xml" },
   { nombre: "Diego Armando Valenciano Garcia", matricula: "2154143",
     practicas: "https://adiego0708-jpg.github.io/Acticidad-Fundamental-6/",
-    becas: "https://adiego0708-jpg.github.io/Actividad-Fundamental-7/" },
+    becas: "https://adiego0708-jpg.github.io/Actividad-Fundamental-7/",
+    intercambio: "https://adiego0708-jpg.github.io/xml_intercambios_fime/" },
   { nombre: "Lizzie Anette Mireles Tejada", matricula: "2144591",
     practicas: "https://lizz-mireles.github.io/2144591_AF6_PWEB/",
-    becas: "https://lizz-mireles.github.io/2144591_AF7_PWEB/" },
+    becas: "https://lizz-mireles.github.io/2144591_AF7_PWEB/",
+    intercambio: "https://lizz-mireles.github.io/2144591_AF2_PWEB/intercambio_fime.xml" },
   { nombre: "Christofer Aaron Torres Puga", matricula: "2159639",
     practicas: "https://chrispuga07.github.io/PrograWeb-PracticasProfesionales/",
-    becas: "https://chrispuga07.github.io/PrograWeb-Becas/" },
+    becas: "https://chrispuga07.github.io/PrograWeb-Becas/",
+    intercambio: "" },
   { nombre: "Diego Damián Camargo Ortiz", matricula: "2150020",
     practicas: "https://camargoortizdd-arch.github.io/programacion-web/af06/",
-    becas: "https://camargoortizdd-arch.github.io/programacion-web/af07/" }
+    becas: "https://camargoortizdd-arch.github.io/programacion-web/af07/",
+    intercambio: "https://camargoortizdd-arch.github.io/programacion-web/intercambio_fime_2150020.xml" }
 ];

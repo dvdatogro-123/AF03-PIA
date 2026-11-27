@@ -29,6 +29,9 @@ const AF5_URL = "https://dvdatogro-123.github.io/AF5-Exposiciones/";
         <div class="team-links">
           <a class="btn btn-lime js-salir" data-nombre="${esc(m.nombre)}" data-tipo="Prácticas profesionales" href="${esc(m.practicas)}" target="_blank" rel="noopener" aria-label="Prácticas profesionales de ${esc(m.nombre)} (abre en otra pestaña)"><i class="bi bi-briefcase" aria-hidden="true"></i> Prácticas</a>
           <a class="btn btn-ghost js-salir" data-nombre="${esc(m.nombre)}" data-tipo="Becas aplicables" href="${esc(m.becas)}" target="_blank" rel="noopener" aria-label="Becas aplicables de ${esc(m.nombre)} (abre en otra pestaña)"><i class="bi bi-mortarboard" aria-hidden="true"></i> Becas</a>
+          ${m.intercambio
+            ? `<a class="btn btn-inter js-salir" data-nombre="${esc(m.nombre)}" data-tipo="Intercambio FIME (XML)" href="${esc(m.intercambio)}" target="_blank" rel="noopener" aria-label="Intercambio FIME en XML de ${esc(m.nombre)} (abre en otra pestaña)"><i class="bi bi-airplane" aria-hidden="true"></i> Intercambio · XML</a>`
+            : `<button type="button" class="btn btn-inter is-pendiente js-pendiente" data-nombre="${esc(m.nombre)}" aria-label="Intercambio de ${esc(m.nombre)}: pendiente"><i class="bi bi-hourglass-split" aria-hidden="true"></i> Intercambio pendiente</button>`}
         </div>
       </article>
     </div>`).join("");
@@ -75,6 +78,8 @@ const AF5_URL = "https://dvdatogro-123.github.io/AF5-Exposiciones/";
       abrir(m.practicas);
     } else if (confirm(`¿Entonces quieres abrir su página de BECAS APLICABLES?\n\n${m.becas}`)) {
       abrir(m.becas);
+    } else if (m.intercambio && confirm(`¿Quieres abrir su INTERCAMBIO FIME (XML)?\n\n${m.intercambio}`)) {
+      abrir(m.intercambio);
     } else {
       input.value = ""; filtrar();
       const card = $("#int-" + i);
@@ -85,6 +90,8 @@ const AF5_URL = "https://dvdatogro-123.github.io/AF5-Exposiciones/";
 
   // 2) Botones de las tarjetas: alerta antes de salir del sitio
   document.addEventListener("click", (ev) => {
+    const pend = ev.target.closest(".js-pendiente");
+    if (pend) { alert(`${pend.dataset.nombre} todavía no ha publicado su actividad de intercambio FIME (XML).`); return; }
     const a = ev.target.closest("a.js-salir");
     if (a && !confirm(`Vas a abrir la página de ${a.dataset.tipo} de ${a.dataset.nombre} en otra pestaña.\n\n¿Continuar?`)) ev.preventDefault();
   });
