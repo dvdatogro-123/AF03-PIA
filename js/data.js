@@ -33,5 +33,5 @@ const TEAM = [
   { nombre: "Diego Damián Camargo Ortiz", matricula: "2150020",
     practicas: "https://camargoortizdd-arch.github.io/programacion-web/af06/",
     becas: "https://camargoortizdd-arch.github.io/programacion-web/af07/",
-    intercambio: "https://camargoortizdd-arch.github.io/programacion-web/intercambio_fime_2150020.xml" }
+    intercambio: "https://camargoortizdd-arch.github.io/programacion-web/af02/" }
 ];
