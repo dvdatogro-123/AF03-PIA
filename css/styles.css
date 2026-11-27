@@ -140,6 +140,24 @@ code, pre, .code { font-family: var(--font-code); }
   font-size: clamp(1.75rem, 4.4vw, 3.25rem); color: var(--lime);
 }
 .portada-lead { color: var(--muted); font-size: 1.125rem; max-width: 34rem; margin-bottom: 2rem; }
+/* Aviso destacado de la exposición AF5 */
+.aviso-af5 {
+  display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 46rem; align-self: center;
+  padding: .85rem .85rem .85rem 1rem; border-radius: 999px; text-decoration: none; color: #000;
+  background: var(--lime); box-shadow: 0 12px 40px -12px rgba(220, 255, 148, .55);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.aviso-af5:hover { color: #000; transform: translateY(-2px); box-shadow: 0 16px 48px -12px rgba(220, 255, 148, .75); }
+.aviso-ico { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #000; color: var(--lime); font-size: 1.3rem; }
+.aviso-txt { flex: 1; min-width: 0; line-height: 1.25; }
+.aviso-txt small { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+.aviso-txt b { font-family: var(--font-head); font-size: 1.1rem; }
+.aviso-btn { flex: none; display: inline-flex; align-items: center; gap: .4rem; padding: .6rem 1.1rem; border-radius: 999px; background: #000; color: var(--lime); font-weight: 700; font-size: .92rem; }
+@media (max-width: 640px) {
+  .aviso-af5 { border-radius: var(--radius); flex-wrap: wrap; padding: 1rem; }
+  .aviso-btn { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .aviso-af5, .aviso-af5:hover { transition: none; transform: none; } }
 .portada-acciones { display: flex; flex-wrap: wrap; gap: .75rem; }
 .portada-acciones .btn-ghost { border-color: rgba(255, 255, 255, .25); background: rgba(5, 7, 12, .4); }
 .nav-af5 { color: var(--lime) !important; }
@@ -173,7 +191,7 @@ code, pre, .code { font-family: var(--font-code); }
   .portada-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .portada { padding-top: 5.5rem; }
+  .portada { padding-top: 7.5rem; }
   .inst-bar { flex-direction: column; align-items: stretch; border-radius: var(--radius); gap: .9rem; align-self: stretch; }
   .inst-sep { width: auto; height: 1px; }
   .inst-badge { width: 52px; height: 52px; }
