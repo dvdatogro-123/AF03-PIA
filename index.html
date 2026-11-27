@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Integrantes · Equipo 1 · Programación Web</title>
-  <meta name="description" content="Integrantes del Equipo 1 de Programación Web (FIME UANL) y sus actividades de prácticas profesionales y becas.">
+  <title>AF03 · PIA · Equipo 1 · Programación Web</title>
+  <meta name="description" content="PIA del Equipo 1 de Programación Web (grupo 002, FIME UANL): integrantes y sus actividades de prácticas profesionales y becas.">
+  <meta name="theme-color" content="#05070c">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,70 +16,146 @@
 </head>
 <body>
 
+<a class="skip-link" href="#integrantes">Saltar a los integrantes</a>
+
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-site fixed-top" id="mainNav">
+<nav class="navbar navbar-site fixed-top" id="mainNav" aria-label="Principal">
   <div class="container">
-    <a class="navbar-brand" href="#inicio"><i class="bi bi-people"></i> Equipo <span>1</span></a>
-    <a class="nav-link" href="#integrantes">Integrantes</a>
+    <a class="navbar-brand" href="#inicio"><i class="bi bi-people" aria-hidden="true"></i> Equipo <span>1</span></a>
+    <ul class="nav-mini">
+      <li><a class="nav-link" href="#integrantes">Integrantes</a></li>
+      <li><a class="nav-link" href="#galeria">Galería</a></li>
+    </ul>
   </div>
 </nav>
 
 <main>
 
-<!-- ================= HERO ================= -->
-<header class="hero portada" id="inicio">
+<!-- ================= PORTADA ================= -->
+<header class="portada" id="inicio">
   <div class="container">
-    <div class="portada-inst">
-      <img class="portada-logo" src="img/uanl.png" width="294" height="300" alt="Escudo de la Universidad Autónoma de Nuevo León">
-      <div class="portada-nombres">
-        <p class="inst-uni">Universidad Autónoma de Nuevo León</p>
-        <p class="inst-fac">Facultad de Ingeniería Mecánica y Eléctrica</p>
+
+    <!-- Barra institucional -->
+    <div class="inst-bar">
+      <div class="inst">
+        <span class="inst-badge"><img src="img/uanl.png" width="294" height="300" alt="Escudo de la Universidad Autónoma de Nuevo León"></span>
+        <p><small>Universidad Autónoma</small>de Nuevo León</p>
       </div>
-      <img class="portada-logo" src="img/fime.png" width="270" height="270" alt="Logo de la Facultad de Ingeniería Mecánica y Eléctrica">
+      <span class="inst-sep" aria-hidden="true"></span>
+      <div class="inst">
+        <span class="inst-badge"><img src="img/fime.png" width="270" height="270" alt="Logo de la Facultad de Ingeniería Mecánica y Eléctrica"></span>
+        <p><small>Facultad de Ingeniería</small>Mecánica y Eléctrica</p>
+      </div>
     </div>
 
-    <div class="portada-centro">
-      <span class="eyebrow">AF03 · Producto Integrador de Aprendizaje</span>
-      <h1 class="mt-2 mb-4">Equipo <span class="hl-lime">1</span></h1>
-
-      <dl class="portada-datos">
-        <div><dt>Materia</dt><dd>Programación Web</dd></div>
-        <div><dt>Maestra</dt><dd>Ing. Lilia Lizeth Santos López</dd></div>
-        <div><dt>Grupo</dt><dd>002</dd></div>
-      </dl>
-
-      <div class="portada-stats">
-        <div class="stat"><b id="nTeam">8</b><span>integrantes</span></div>
-        <div class="stat"><b id="nPages">16</b><span>páginas publicadas</span></div>
+    <div class="portada-grid">
+      <div class="portada-main">
+        <span class="eyebrow">AF03 · Producto Integrador de Aprendizaje</span>
+        <h1 class="portada-title">PIA<span>Equipo 1</span></h1>
+        <p class="portada-lead">Las actividades individuales de los ocho integrantes del equipo, reunidas en un solo lugar: prácticas profesionales y becas aplicables.</p>
+        <a class="btn btn-lime portada-cta" href="#integrantes"><i class="bi bi-arrow-down" aria-hidden="true"></i> Ver integrantes</a>
       </div>
 
-      <a class="btn btn-lime portada-cta" href="#integrantes"><i class="bi bi-people"></i> Ver integrantes</a>
+      <aside class="ficha" aria-labelledby="ficha-t">
+        <h2 class="ficha-t" id="ficha-t">Datos de la entrega</h2>
+        <dl>
+          <div class="ficha-row">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <dt>Materia</dt><dd>Programación Web</dd>
+          </div>
+          <div class="ficha-row">
+            <i class="bi bi-person-badge" aria-hidden="true"></i>
+            <dt>Maestra</dt><dd>Ing. Lilia Lizeth Santos López</dd>
+          </div>
+          <div class="ficha-row">
+            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+            <dt>Grupo</dt><dd>002</dd>
+          </div>
+          <div class="ficha-row">
+            <i class="bi bi-people" aria-hidden="true"></i>
+            <dt>Integrantes</dt><dd><span id="nTeam">8</span> alumnos · <span id="nPages">16</span> páginas publicadas</dd>
+          </div>
+        </dl>
+      </aside>
     </div>
-
   </div>
 </header>
 
 <!-- ================= INTEGRANTES ================= -->
-<section class="part part-internet" id="integrantes">
+<section class="part" id="integrantes" aria-labelledby="h-integrantes">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">Equipo 1 · Grupo 002</span>
+        <h2 class="part-title" id="h-integrantes">Los <em>integrantes</em></h2>
+        <p class="part-sub">Cada integrante tiene publicadas dos actividades: prácticas profesionales y becas aplicables. Busca por nombre o matrícula.</p>
+      </div>
+
+      <form class="buscador" id="buscador" role="search" aria-label="Buscar integrante">
+        <label for="q" class="buscador-label">Buscar integrante</label>
+        <div class="buscador-box">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="q" name="q" type="search" list="lista-team" placeholder="Nombre o matrícula" autocomplete="off" required>
+          <button type="submit">Buscar</button>
+        </div>
+        <datalist id="lista-team"></datalist>
+        <p class="buscador-help" id="buscador-help" aria-live="polite">Al buscar, una alerta te pregunta a qué página quieres ir.</p>
+      </form>
+    </div>
+
+    <div class="row g-4" id="teamGrid"></div>
+    <p class="vacio" id="vacio" hidden><i class="bi bi-person-x" aria-hidden="true"></i> Ningún integrante coincide con esa búsqueda.</p>
+  </div>
+</section>
+
+<!-- ================= GALERÍA ================= -->
+<section class="part part-galeria" id="galeria" aria-labelledby="h-galeria">
   <div class="container">
     <div class="reveal">
-      <span class="eyebrow">Equipo 1</span>
-      <h2 class="part-title">Los <em>integrantes</em></h2>
-      <p class="part-sub">Cada integrante tiene publicadas sus actividades individuales: la de prácticas profesionales y la de becas aplicables.</p>
+      <span class="eyebrow">Nuestra facultad</span>
+      <h2 class="part-title" id="h-galeria">La vida en la <em>FIME</em></h2>
+      <p class="part-sub">El campus donde estudiamos y el día a día de ser estudiante: clases, biblioteca y trabajo en equipo.</p>
     </div>
-    <div class="row g-4 mt-2" id="teamGrid"></div>
+
+    <div class="bento mt-4">
+      <figure class="bento-item bento-big reveal">
+        <img src="img/galeria/fime-letras.jpg" width="960" height="720" loading="lazy" alt="Letras grandes de FIME frente a los edificios de la facultad, rodeadas de árboles">
+        <figcaption><span>Campus</span>Ciudad Universitaria, San Nicolás de los Garza</figcaption>
+      </figure>
+      <figure class="bento-item reveal">
+        <img src="img/galeria/fime-campus.jpg" width="960" height="720" loading="lazy" alt="Módulo verde con las letras FIME y estudiantes en los jardines del campus">
+        <figcaption><span>Espacios</span>Jardines y módulos de la facultad</figcaption>
+      </figure>
+      <figure class="bento-item reveal">
+        <img src="img/galeria/biblioteca.jpg" width="1000" height="666" loading="lazy" alt="Estudiantes trabajando en mesas largas de una biblioteca universitaria">
+        <figcaption><span>Estudio</span>Horas de biblioteca</figcaption>
+      </figure>
+      <figure class="bento-item reveal">
+        <img src="img/galeria/estudiando.jpg" width="1000" height="666" loading="lazy" alt="Dos estudiantes repasan apuntes en una mesa">
+        <figcaption><span>Repaso</span>Preparando exámenes</figcaption>
+      </figure>
+      <figure class="bento-item reveal">
+        <img src="img/galeria/grupo.jpg" width="1000" height="750" loading="lazy" alt="Grupo de estudiantes trabajando juntos con laptop y cuadernos">
+        <figcaption><span>Equipo</span>Trabajo colaborativo, como este PIA</figcaption>
+      </figure>
+    </div>
+    <p class="creditos">Fotos vía Wikimedia Commons: campus FIME (CC0), Gary Todd (CC0), Tulane Public Relations (CC BY 2.0) y KSULib (CC BY 2.0). Logos: UANL y FIME.</p>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-    <span><i class="bi bi-people"></i> Equipo 1 · Programación Web · FIME UANL</span>
-    <span>HTML · CSS · JavaScript · Bootstrap 5</span>
+  <div class="container footer-in">
+    <div class="footer-inst">
+      <img src="img/uanl.png" width="40" height="41" alt="" aria-hidden="true">
+      <img src="img/fime.png" width="40" height="40" alt="" aria-hidden="true">
+      <span>Equipo 1 · Programación Web · Grupo 002<br><small>FIME · Universidad Autónoma de Nuevo León</small></span>
+    </div>
+    <span class="footer-tech">HTML · CSS · JavaScript · Bootstrap 5</span>
   </div>
 </footer>
 
-<button id="toTop" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<button id="toTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/data.js"></script>
