@@ -5,7 +5,7 @@ const TEAM = [
   { nombre: "David Alonso Torres Guerrero", matricula: "2144813",
     practicas: "https://dvdatogro-123.github.io/AF6-PracticasProfesionales/",
     becas: "https://dvdatogro-123.github.io/AF7_BecasAplicables/",
-    intercambio: "https://dvdatogro-123.github.io/AF02-ORD/" },
+    intercambio: "https://dvdatogro-123.github.io/AF02-ORD/index.xml" },
   { nombre: "Héctor Alexander Tovar González", matricula: "2144664",
     practicas: "https://alexander-tovar.github.io/fundamentales/practicas/",
     becas: "https://alexander-tovar.github.io/fundamentales/becas/",
